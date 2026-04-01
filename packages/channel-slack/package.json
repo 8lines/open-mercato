@@ -1,0 +1,31 @@
+{
+  "name": "@open-mercato/channel-slack",
+  "version": "0.1.0",
+  "description": "Slack channel adapter for Open Mercato communication channels",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@slack/web-api": "^7.0.0",
+    "@slack/signature": "^1.0.0",
+    "@slack/bolt": "^3.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "@open-mercato/communication-channels": "workspace:*"
+  }
+}

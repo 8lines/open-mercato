@@ -1,0 +1,30 @@
+{
+  "name": "@open-mercato/channel-email",
+  "version": "2.0.0",
+  "description": "Email channel adapter for Open Mercato communication channels",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@open-mercato/communication_channels": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "vitest": "^1.2.0"
+  },
+  "peerDependencies": {
+    "@open-mercato/channel-adapter-base": "workspace:*"
+  }
+}
